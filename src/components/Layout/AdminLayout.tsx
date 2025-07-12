@@ -1,5 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import AdminSidebar from './AdminSidebar';
 
 const AdminLayout: React.FC = () => {
   return (
@@ -21,18 +22,8 @@ const AdminLayout: React.FC = () => {
       </header>
       
       <div className="flex">
-        {/* Placeholder for AdminSidebar */}
-        <aside className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col lg:pt-16">
-          <div className="flex flex-col flex-1 min-h-0 bg-white border-r border-gray-200">
-            <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
-              <nav className="flex-1 px-2 space-y-1">
-                <div className="text-sm font-medium text-charcoal-600 px-2 py-2">
-                  Panel de Administración
-                </div>
-              </nav>
-            </div>
-          </div>
-        </aside>
+        {/* Sidebar de navegación para admin */}
+        <AdminSidebar />
         
         <main className="flex-1 lg:ml-64">
           <div className="p-4 lg:p-8">
