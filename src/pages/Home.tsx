@@ -45,25 +45,25 @@ const Home: React.FC = () => {
       icon: <Shield className="w-8 h-8 text-gold-500" />,
       title: "Calidad Garantizada",
       description:
-        "Productos de la más alta calidad con certificación internacional y garantía completa.",
+        "Confía en lo extraordinario: productos de calidad superior, certificados internacionalmente y con garantía total para tu tranquilidad.",
     },
     {
       icon: <Users className="w-8 h-8 text-gold-500" />,
       title: "Red de Socios",
       description:
-        "Únete a nuestra exclusiva red de mayoristas y empresarios exitosos.",
+        "Forma parte de una red exclusiva de mayoristas visionarios y empresarios que ya están llevando sus negocios al siguiente nivel.",
     },
     {
       icon: <Truck className="w-8 h-8 text-gold-500" />,
       title: "Envío Nacional",
       description:
-        "Entrega rápida y segura a todo el país con seguimiento en tiempo real.",
+        "Recibe tus productos rápido y sin preocupaciones: envío seguro a todo el país con seguimiento en tiempo real",
     },
     {
       icon: <Award className="w-8 h-8 text-gold-500" />,
       title: "Precios Preferenciales",
       description:
-        "Acceso a precios mayoristas y condiciones especiales para empresarios.",
+        "Accede a precios mayoristas exclusivos y condiciones preferenciales pensadas para hacer crecer tu negocio",
     },
   ];
 
@@ -72,7 +72,7 @@ const Home: React.FC = () => {
       name: "María García",
       business: "Joyería Elegancia",
       comment:
-        "Kevin Jewelry ha transformado mi negocio. La calidad es excepcional y el servicio impecable.",
+        "Antes vendía productos comunes, ahora ofrezco piezas que mis clientes adoran. Kevin Jewelry no solo mejoró mis ingresos, me hizo crecer como emprendedora.",
       rating: 5,
     },
     {
@@ -92,7 +92,6 @@ const Home: React.FC = () => {
   ];
 
   const collections = [
-     
     {
       name: "Oro",
       description: "Elegancia clásica en cada pieza.",
@@ -125,13 +124,13 @@ const Home: React.FC = () => {
             <div className="space-y-8 animate-slide-up">
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-6xl font-display font-bold text-charcoal-800 leading-tight">
-                  Joyería Premium para
-                  <span className="text-gold-600 block">Tu Negocio</span>
+                  Transforma tu negocio con
+                  <span className="text-gold-600 block">Joyería Premium</span>
                 </h1>
                 <p className="text-xl text-charcoal-600 leading-relaxed max-w-xl">
-                  Únete a nuestra exclusiva red de mayoristas y empresarios.
-                  Descubre precios especiales, catálogos exclusivos y el mejor
-                  servicio personalizado.
+                  Multiplica tus ventas, enamora a tus clientes y diferénciate
+                  con piezas exclusivas pensadas para mayoristas que quieren
+                  destacar.
                 </p>
               </div>
 
@@ -140,7 +139,7 @@ const Home: React.FC = () => {
                   to="/registro"
                   className="bg-gold-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gold-600 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center group"
                 >
-                  Registrarse Ahora
+                  Comienza Tu Negocio Hoy
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
@@ -163,42 +162,35 @@ const Home: React.FC = () => {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="relative bg-white p-4 rounded-3xl shadow-2xl">
-                <video
-                  ref={videoRefDesktop}
-                  className="w-full max-h-[500px] object-contain rounded-2xl"
-                  src="https://kevinjewelry.com/cdn/shop/videos/c/vp/2155e633f53b4ed3992b941de29293fa/2155e633f53b4ed3992b941de29293fa.HD-1080p-7.2Mbps-42844374.mp4?v=0"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                />
-                <div className="absolute -bottom-4 -right-4 bg-gold-500 text-white p-4 rounded-2xl shadow-xl">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold">98%</div>
-                    <div className="text-sm">Satisfacción</div>
-                  </div>
-                </div>
-              </div>
+            <div className="flex justify-center items-center w-full">
+              <video
+                ref={videoRefDesktop}
+                className="w-[360px] h-[600px] object-contain rounded-3xl shadow-2xl p-5"
+                src="https://kevinjewelry.com/cdn/shop/videos/c/vp/2155e633f53b4ed3992b941de29293fa/2155e633f53b4ed3992b941de29293fa.HD-1080p-7.2Mbps-42844374.mp4?v=0"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-white">
+      <section className="py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-charcoal-800 mb-4">
+            <h2 className="text-5xl font-display font-extrabold text-charcoal-800 mb-6">
               ¿Por qué elegir{" "}
               <span className="text-gold-600">Kevin Jewelry</span>?
             </h2>
-            <p className="text-lg md:text-xl text-charcoal-600 max-w-3xl mx-auto">
-              Con más de una década en la industria de la joyería, nos hemos
-              consolidado como el aliado perfecto de mayoristas y empresarios.
-              Calidad, confianza y elegancia definen cada una de nuestras
-              piezas.
+            <p className="text-xl md:text-2xl text-charcoal-600 max-w-3xl mx-auto leading-relaxed">
+              Porque no solo vendemos joyas:{" "}
+              <strong>impulsamos negocios</strong>,{" "}
+              <strong>creamos confianza</strong> y{" "}
+              <strong>ofrecemos oportunidades reales de crecimiento</strong> a
+              emprendedores como tú.
             </p>
           </div>
 
@@ -206,10 +198,10 @@ const Home: React.FC = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="text-center p-8 rounded-3xl bg-cream-50 hover:bg-white border border-gold-100 hover:shadow-xl transition-all duration-300 animate-fade-up"
+                className="text-center p-8 rounded-3xl bg-gradient-to-br from-cream-50 to-white border border-gold-100 hover:shadow-2xl transition-all duration-300 animate-fade-up hover:scale-105"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gold-100 to-cream-100 rounded-xl mb-6 shadow-md">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gold-100 rounded-xl mb-6 shadow-md">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold text-charcoal-800 mb-3">
@@ -220,6 +212,20 @@ const Home: React.FC = () => {
                 </p>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-16">
+            <p className="text-lg text-charcoal-700 max-w-xl mx-auto mb-6">
+              Miles ya han confiado en nosotros. ¿Y tú? Da el primer paso hoy
+              mismo hacia un negocio más rentable y exitoso.
+            </p>
+            <Link
+              to="/registro"
+              className="inline-flex items-center bg-gold-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gold-600 transition-all group shadow-md hover:shadow-xl"
+            >
+              Quiero Ser Parte del Éxito
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>
@@ -233,9 +239,9 @@ const Home: React.FC = () => {
               Colecciones <span className="text-gold-600">Destacadas</span>
             </h2>
             <p className="text-lg md:text-xl text-charcoal-600 max-w-3xl mx-auto">
-              Cada colección ha sido diseñada meticulosamente para reflejar
-              lujo, elegancia y estilo contemporáneo. Elige lo que represente
-              mejor a tu marca.
+              Cada colección está cuidadosamente diseñada para proyectar lujo,
+              elegancia y un estilo contemporáneo que eleva tu marca y la hace
+              inolvidable.
             </p>
           </div>
 

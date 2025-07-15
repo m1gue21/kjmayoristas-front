@@ -95,10 +95,16 @@ const About: React.FC = () => {
                   <span className="text-gold-600 block">Excelencia</span>
                 </h1>
                 <p className="text-xl text-charcoal-600 leading-relaxed">
-                  Desde 2014, Kevin Jewelry ha sido sinónimo de calidad,
-                  elegancia y confianza en el mundo de la joyería premium.
-                  Conoce la historia detrás de nuestra marca y nuestra visión
-                  para el futuro.
+                  Nuestro proposito es ayudarte a ti a crear tu propia empresa
+                  exitosa en la industria del oro 18K laminado, KEVIN JEWELRY
+                  lleva 8 años de trayectoria, iniciamos en Colombia y en 2021
+                  en España y en 2022 en Ecuador, Somos fabricantes directos y
+                  nuestras joyas son elaboradas con los mas altos estándares de
+                  calidad internacional, inicio como una empresa que solo vendia
+                  joyas a cliente final y en el camino fuimos transformando lo
+                  que es la empresa, hoy nuestro principal foco es ayudar a la
+                  mayor cantidad de personas posibles a crear su propia joyería
+                  y tener los maximos resultados posibles.
                 </p>
               </div>
             </div>
@@ -107,7 +113,7 @@ const About: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-gold-200/30 to-cream-200/30 rounded-3xl transform -rotate-6"></div>
               <div className="relative bg-white p-8 rounded-3xl shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg"
+                  src="/media/kevin.webp"
                   alt="Kevin Jewelry - Artesanía Premium"
                   className="w-full h-96 object-cover rounded-2xl"
                 />
@@ -125,8 +131,8 @@ const About: React.FC = () => {
               Nuestra <span className="text-gold-600">Esencia</span>
             </h2>
             <p className="text-xl text-charcoal-600 max-w-3xl mx-auto">
-              Descubre el propósito que guía cada joya que diseñamos y la visión
-              que ilumina nuestro camino.
+              Más que joyas, creamos símbolos de propósito, elegancia y
+              conexión. Conoce lo que guía nuestro camino y nos hace únicos.
             </p>
           </div>
 
@@ -140,12 +146,11 @@ const About: React.FC = () => {
                 Nuestra Misión
               </h3>
               <p className="text-lg text-charcoal-700 leading-relaxed">
-                Crear joyas que trasciendan el tiempo, capturando no solo la
-                belleza exterior, sino también el valor emocional de los
-                momentos especiales. Nos dedicamos a fortalecer una red de
-                aliados comprometidos con la calidad, el respeto y el
-                crecimiento mutuo, aportando valor real a cada cliente y socio
-                comercial.
+                Inspiramos conexiones reales a través de joyas que cuentan
+                historias, celebran logros y perduran en el tiempo. Nuestra
+                misión es ofrecer valor con propósito: fortaleciendo alianzas
+                duraderas basadas en la confianza, la excelencia artesanal y el
+                crecimiento mutuo.
               </p>
             </div>
 
