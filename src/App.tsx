@@ -12,6 +12,7 @@ import PublicCatalog from './pages/PublicCatalog';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Benefits from './pages/Benefits';
 
 // Private Pages
 import Dashboard from './pages/private/Dashboard';
@@ -81,6 +82,7 @@ function App() {
               <Route path="nosotros" element={<About />} />
               <Route path="catalogo" element={<PublicCatalog />} />
               <Route path="contacto" element={<Contact />} />
+              <Route path="beneficios" element={<Benefits />} />
             </Route>
             
             {/* Auth Routes */}

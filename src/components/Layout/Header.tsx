@@ -16,6 +16,7 @@ const Header: React.FC = () => {
     { path: "/nosotros", label: "Nosotros" },
     { path: "/catalogo", label: "Catálogo" },
     { path: "/contacto", label: "Contacto" },
+    { path: "/beneficios", label: "Beneficios" },
   ];
 
   const privateNavItems = [
