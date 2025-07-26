@@ -59,9 +59,12 @@ const PrivateSidebar: React.FC = () => {
             {/* Logo */}
             <div className="flex items-center flex-shrink-0 px-4 mb-8">
               <Link to="/dashboard" className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gold-500 rounded-lg flex items-center justify-center">
-                  <div className="w-5 h-5 border-2 border-white rounded transform rotate-45"></div>
-                </div>
+                <img
+              src="/media/Captura de pantalla 2025-07-12 003613.png"
+              alt="Kevin Jewelry"
+              className="h-10 w-auto object-contain" // Puedes probar con h-16 o más si quieres que crezca
+              
+            />
                 <span className="font-display text-xl font-bold text-charcoal-800">
                   Kevin Jewelry
                 </span>

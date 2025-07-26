@@ -18,10 +18,11 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img
-                src="/"
-                alt="Kevin Jewelry"
-                className="h-10 w-auto object-contain" // Puedes ajustar h-10 a h-8 si la quieres aún más pequeña
-              />
+              src="/media/image.png"
+              alt="Kevin Jewelry"
+              className="h-14 w-auto object-contain" // Puedes probar con h-16 o más si quieres que crezca
+              
+            />
               <span className="font-display text-2xl font-bold text-white">
                 Kevin Jewelry
               </span>

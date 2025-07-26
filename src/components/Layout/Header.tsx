@@ -20,10 +20,11 @@ const Header: React.FC = () => {
   ];
 
   const privateNavItems = [
-    { path: "/dashboard", label: "Dashboard" },
-    { path: "/catalogo-exclusivo", label: "Catálogo Exclusivo" },
-    { path: "/pedidos", label: "Mis Pedidos" },
-    { path: "/reuniones", label: "Reuniones" },
+    { path: "/", label: "Inicio" },
+    { path: "/nosotros", label: "Nosotros" },
+    { path: "/catalogo", label: "Catálogo" },
+    { path: "/contacto", label: "Contacto" },
+    { path: "/beneficios", label: "Beneficios" },
   ];
 
   const navItems =
@@ -40,7 +41,7 @@ const Header: React.FC = () => {
             <img
               src="/media/Captura de pantalla 2025-07-12 003613.png"
               alt="Kevin Jewelry"
-              className="h-14 w-auto object-contain" // Puedes probar con h-16 o más si quieres que crezca
+              className="h-11 w-auto object-contain" // Puedes probar con h-16 o más si quieres que crezca
               
             />
             <span className="font-display text-2xl font-bold text-gray-800">

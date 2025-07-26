@@ -68,9 +68,12 @@ const Login: React.FC = () => {
         {/* Header */}
         <div className="text-center">
           <Link to="/" className="flex items-center justify-center space-x-3 mb-6">
-            <div className="w-12 h-12 bg-gold-500 rounded-lg flex items-center justify-center">
-              <div className="w-6 h-6 border-2 border-white rounded transform rotate-45"></div>
-            </div>
+            <img
+              src="/media/Captura de pantalla 2025-07-12 003613.png"
+              alt="Kevin Jewelry"
+              className="h-14 w-auto object-contain" // Puedes probar con h-16 o más si quieres que crezca
+              
+            />
             <span className="font-display text-2xl font-bold text-charcoal-800">
               Kevin Jewelry
             </span>

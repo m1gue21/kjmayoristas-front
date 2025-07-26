@@ -22,9 +22,12 @@ const PrivateHeader: React.FC = () => {
 
           {/* Logo - only visible on mobile */}
           <Link to="/dashboard" className="lg:hidden flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gold-500 rounded-lg flex items-center justify-center">
-              <div className="w-4 h-4 border-2 border-white rounded transform rotate-45"></div>
-            </div>
+            <img
+              src="/media/Captura de pantalla 2025-07-12 003613.png"
+              alt="Kevin Jewelry"
+              className="h-14 w-auto object-contain" // Puedes probar con h-16 o más si quieres que crezca
+              
+            />
             <span className="font-display text-lg font-bold text-charcoal-800">
               Kevin Jewelry
             </span>
