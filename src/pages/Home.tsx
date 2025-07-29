@@ -83,7 +83,7 @@ const Home: React.FC = () => {
       rating: 5,
     },
     {
-      name: "Ana Rodríguez",
+      name: "Ana maria Rodríguez",
       business: "Boutique Sofia",
       comment:
         "La variedad del catálogo exclusivo y la rapidez en las entregas son extraordinarias.",
