@@ -1,92 +1,75 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { User, AuthContextType } from '../types';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { User, AuthContextType } from "../types";
+import axios from "axios";
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
-
-// Mock data for development
-const mockUsers: User[] = [
-  {
-    id: '1',
-    email: 'mayorista@example.com',
-    name: 'Juan Pérez',
-    businessName: 'Joyería El Dorado',
-    businessType: 'mayorista',
-    status: 'approved',
-    ruc: '12345678901',
-    phone: '+51 999 123 456',
-    address: 'Av. Principal 123, Lima',
-    createdAt: new Date('2024-01-15'),
-  },
-  {
-    id: '2',
-    email: 'empresario@example.com',
-    name: 'María García',
-    businessName: 'Accesorios Premium',
-    businessType: 'empresario',
-    status: 'approved',
-    ruc: '10987654321',
-    phone: '+51 999 654 321',
-    address: 'Jr. Comercio 456, Arequipa',
-    createdAt: new Date('2024-02-01'),
-  }
-];
+const API_URL = import.meta.env.VITE_API_URL;
 
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Check for saved user in localStorage
-    const savedUser = localStorage.getItem('kevin-jewelry-user');
+    // Verifica si hay usuario guardado en localStorage
+    const savedUser = localStorage.getItem("kevin-jewelry-user");
     if (savedUser) {
       setUser(JSON.parse(savedUser));
     }
     setLoading(false);
   }, []);
 
+  // 🔑 Login con API
   const login = async (email: string, password: string): Promise<boolean> => {
     setLoading(true);
-    
-    // Mock authentication
-    const foundUser = mockUsers.find(u => u.email === email);
-    if (foundUser && password === 'password123') {
-      setUser(foundUser);
-      localStorage.setItem('kevin-jewelry-user', JSON.stringify(foundUser));
-      setLoading(false);
-      return true;
+    try {
+      const response = await axios.post(`${API_URL}/auth/login`, {
+        email,
+        password,
+      });
+
+      if (response.data) {
+        const loggedUser = response.data.user; // 👈 revisa que tu API devuelva { user: {...} }
+        setUser(loggedUser);
+        localStorage.setItem("kevin-jewelry-user", JSON.stringify(loggedUser));
+        setLoading(false);
+        return true;
+      }
+    } catch (error) {
+      console.error("Error en login:", error);
     }
-    
     setLoading(false);
     return false;
   };
 
+  // 🚪 Logout
   const logout = () => {
     setUser(null);
-    localStorage.removeItem('kevin-jewelry-user');
+    localStorage.removeItem("kevin-jewelry-user");
   };
 
+  // 📝 Register (mock, no tocar)
   const register = async (userData: Partial<User>): Promise<boolean> => {
     setLoading(true);
-    
-    // Mock registration
+
     const newUser: User = {
       id: Date.now().toString(),
       email: userData.email!,
       name: userData.name!,
       businessName: userData.businessName!,
       businessType: userData.businessType!,
-      status: 'pending',
+      status: "pending",
       ruc: userData.ruc,
       phone: userData.phone!,
       address: userData.address,
       createdAt: new Date(),
     };
 
-    // In a real app, this would make an API call
+    // Aquí iría un llamado real a tu API
     setLoading(false);
     return true;
   };
 
+  // 📦 Valor que se pasa al contexto
   const value: AuthContextType = {
     user,
     login,
@@ -96,17 +79,14 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     loading,
   };
 
-  return (
-    <AuthContext.Provider value={value}>
-      {children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
 
+// Hook para usar el contexto
 export const useAuth = (): AuthContextType => {
   const context = useContext(AuthContext);
   if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
 };

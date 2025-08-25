@@ -3,7 +3,7 @@ export interface User {
   email: string;
   name: string;
   businessName: string;
-  businessType: 'mayorista' | 'empresario';
+  businessType: 'mayorista' | 'empresario' | 'admin';
   status: 'pending' | 'approved' | 'suspended';
   ruc?: string;
   phone: string;

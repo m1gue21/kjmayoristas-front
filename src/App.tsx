@@ -63,9 +63,10 @@ const AdminRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     );
   }
   
-  if (!isAuthenticated || !user || (user.businessType !== 'admin' && user.id !== '1')) {
-    return <Navigate to="/" replace />;
-  }
+if (!isAuthenticated || !user || (user?.businessType !== "admin" && user?.id !== "1")) {
+  return <Navigate to="/" replace />;
+}
+
   
   return <>{children}</>;
 };
